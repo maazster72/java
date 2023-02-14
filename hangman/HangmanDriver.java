@@ -11,6 +11,9 @@ public class HangmanDriver {
         String inputStr = keyboardConsole.readLine("Player name: ");
         game.setPlayerName(inputStr);
         System.out.println("Welcome " + game.getPlayerName() + "!");
+        HangmanDictionary dictionary = new HangmanDictionary();
+        game.setWord(dictionary.getWord());
+        System.out.println("The game word is " + game.getWord());
 
     }
 }
