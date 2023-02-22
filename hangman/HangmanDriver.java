@@ -11,6 +11,11 @@ public class HangmanDriver {
         System.out.println("Welcome " + game.getPlayerName() + "!");
         HangmanDictionary dictionary = new HangmanDictionary();
         game.setWord(dictionary.getWord());
+        do {
+          String userGuess = keyboardConsole.readLine("Guess a letter: ");
+          game.tryChar(userGuess.charAt(0));
+          System.out.println(game.getCurrentState()+", you have "+game.getRemainingGuesses()+" guesses remaining");
+        } while (game.getRemainingGuesses() != 0 || game.getCurrentState() != game.getWord());
         System.out.println("The game word is " + game.getWord());
 
     }
