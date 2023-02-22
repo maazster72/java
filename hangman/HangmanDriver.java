@@ -1,5 +1,3 @@
-package hangman;
-
 import java.io.Console;
 
 public class HangmanDriver {
